@@ -4,30 +4,61 @@
     <title>
       RPS
     </title>
+    <style>
+
+      body {
+        background-color: black;
+        color: white;
+        font-family: Arial;
+      }
+
+      .title-button {
+        font-family: Arial;
+        font-size: 30px;
+      }
+
+      .rock-move-icon {
+        height: 50px;
+      }
+
+      .paper-move-icon {
+        height: 50px;
+      }
+
+      .scissor-move-icon {
+        height: 50px;
+      }
+
+      .move-button {
+        background-color: transparent;
+        border: 3px dashed white;
+        border-radius: 50px;
+        margin: 3px;
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+
+      }
+    </style>
   </head>
   <body>
-    <p> Rock paper Scissor</p>
+    <p class="title-button"> Rock paper Scissor</p>
 
     <button onclick="
-      
       playGame('rock');
-
-      ">Rock</button>
+      " class="move-button">
+      <img src="images/rock-emoji.png" class="rock-move-icon"></button>
 
       <button onclick="
-      
       playGame('paper');
-
-      "
-      >paper</button>
+      " class="move-button">
+      <img src="images/paper-emoji.png" class="paper-move-icon"></button>
 
       <button onclick="
-
       playGame('scissor');
-    
-      "
-      
-      >scissors</button>
+      " class="move-button">
+      <img src="images/scissors-emoji.png" class="scissor-move-icon"></button>
+
       <p class="js-result"></p>
       <p class="js-moves"></p>
       <p class="js-score"></p>
@@ -50,16 +81,6 @@
         };
 
        updateScoreElement();
-
-     /* if (!score){
-
-        score = {
-          wins: 0,
-          losses: 0,
-          ties: 0
-        };
-      */
-      
 
      function playGame(playerMove){
       
@@ -130,9 +151,6 @@
        document.querySelector('.js-moves')
         .innerHTML = `You ${playerMove} - ${computerMove} Computer`;
 
-
-      
-   // alert(`You picked ${playerMove}. computer picked ${computerMove}. ${result}`);
     
     function updateScoreElement (){
 
