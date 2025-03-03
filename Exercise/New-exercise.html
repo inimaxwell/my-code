@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .toggled-button{
+        background-color: black;
+        color: white;
+        padding:10px 15px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .is-toggled{
+        background-color: rgb(200, 200, 200);
+        color: black;
+        padding: 10px 15px;
+        border-radius: 10px;
+        border: none;
+      }
+
+    </style>
+  </head>
+  <body>
+    <button
+     onclick="toggledButton('.music-button')" class="toggled-button music-button">Music</button>
+    <button
+     onclick="toggledButton('.tech-button')" class="toggled-button tech-button">Tech</button>
+    <button
+     onclick="toggledButton('.gaming-button')" class="toggled-button gaming-button"> Gaming </button>
+
+    <script>
+
+      function toggledButton(career){
+        const buttonElement = document.querySelector(career);
+        if(!buttonElement.classList.contains('is-toggled')){
+          turnOffButton();
+          buttonElement.classList.add('is-toggled');
+        } else {
+          buttonElement.classList.remove('is-toggled');
+        }
+      }
+
+      function turnOffButton(){
+        const previousButton = document.querySelector('.is-toggled');
+        if (previousButton){
+          previousButton.classList.remove('is-toggled');
+        }
+      }
+
+      
+    </script>
+  </body>
+</html>

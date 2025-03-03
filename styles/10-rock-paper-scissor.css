@@ -1,0 +1,39 @@
+
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial;
+}
+
+.title-button {
+  font-family: Arial;
+  font-size: 30px;
+}
+
+.rock-move-icon {
+  height: 50px;
+}
+
+.paper-move-icon {
+  height: 50px;
+}
+
+.scissor-move-icon {
+  height: 50px;
+}
+
+.move-button {
+  background-color: transparent;
+  border: 3px dashed white;
+  border-radius: 50px;
+  margin: 3px;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+
+}
+
+.result{
+  font-size: 10px;
+  font-weight: bold;
+}

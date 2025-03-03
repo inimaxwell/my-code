@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Arrays and Loops
+    </title>
+    <body>
+      
+
+      <script>
+     const todoList = ['watch youtube', 'wash dishes'];
+    renderTodoList();
+    function renderTodoList(){
+    let todoListHTML = '';
+
+      for(let i = 0; i < index.length; i++){
+        const todo = todoList[i];
+        const html = `<p>${todo}</p>`;
+        todoListHTML += html;
+        }
+
+        console.log(todoListHTML);
+        document.querySelector('.js-todo').innerHTML = todoListHTML;
+  }
+
+    function addTodo(){
+      const inputElement = document.querySelector('.js-input-button');
+      const name = inputElement.value;
+      todoList.push(name);
+      inputElement.value = '';
+      renderTodoList();
+    }
+    alert('hello world');
+  console.log('hello world');
+      </script>
+    </body>
+  </head>
+</html>
